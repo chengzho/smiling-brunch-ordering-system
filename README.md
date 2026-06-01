@@ -1,6 +1,6 @@
 # Smiling Brunch Ordering System
 
-<p align="center">
+<p align="left">
   <img src="frontend/public/images/logo-mark.png" alt="Smiling Brunch Logo" width="90" />
 </p>
 
