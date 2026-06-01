@@ -44,7 +44,7 @@ export function Navbar() {
     <nav className="navbar">
       <NavLink to="/" className="navbar-brand">
         <img
-          src="/images/logo-mark.png"
+          src={`${import.meta.env.BASE_URL}images/logo-mark.png`}
           alt=""
           className="navbar-logo"
           onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}

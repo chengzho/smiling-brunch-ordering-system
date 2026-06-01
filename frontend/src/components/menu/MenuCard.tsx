@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { MenuItem } from '../../types/menu';
 import { formatCurrency } from '../../utils/formatCurrency';
+import { resolveAssetUrl } from '../../utils/assetPath';
 
 type MenuCardProps = {
   item: MenuItem;
@@ -31,7 +32,7 @@ export function MenuCard({ item, onAddToCart, onOpen }: MenuCardProps) {
       <div className="menu-card-img">
         {!imgError ? (
           <img
-            src={item.image_url}
+            src={resolveAssetUrl(item.image_url)}
             alt={item.item_name}
             loading="lazy"
             decoding="async"

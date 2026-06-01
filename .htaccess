@@ -1,0 +1,22 @@
+# Disable directory listing for all directories
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /restaurant-ordering/
+
+  # ── Block direct HTTP access to sensitive backend paths ──────────────────────
+  RewriteRule ^(config|database|helpers|services|frontend)(/.*)?$ - [F,L]
+  RewriteRule ^bootstrap\.php$ - [F,L]
+
+  # ── Pass API requests straight through to PHP ─────────────────────────────────
+  RewriteRule ^api/ - [L]
+
+  # ── Serve real files and directories (assets/, images/, index.html, etc.) ─────
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # ── React Router: fall back to index.html for all other paths ─────────────────
+  RewriteRule ^ index.html [L]
+</IfModule>

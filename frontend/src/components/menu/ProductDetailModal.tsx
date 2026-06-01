@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import type { MenuItem } from '../../types/menu';
 import { formatCurrency } from '../../utils/formatCurrency';
+import { resolveAssetUrl } from '../../utils/assetPath';
 
 type ProductDetailModalProps = {
   item: MenuItem;
@@ -52,7 +53,7 @@ export function ProductDetailModal({ item, onClose, onAddToCart }: ProductDetail
           <div className="product-modal-img">
             {!imgError ? (
               <img
-                src={item.image_url}
+                src={resolveAssetUrl(item.image_url)}
                 alt={item.item_name}
                 loading="lazy"
                 decoding="async"

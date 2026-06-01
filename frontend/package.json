@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build:xampp": "tsc && vite build --base=/restaurant-ordering/ && node scripts/deploy-xampp.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

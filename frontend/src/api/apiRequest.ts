@@ -1,4 +1,4 @@
-const API_BASE = '/api';
+const API_BASE = `${import.meta.env.BASE_URL}api`;
 
 type UnauthorizedHandler = () => void;
 let _unauthorizedHandler: UnauthorizedHandler | null = null;

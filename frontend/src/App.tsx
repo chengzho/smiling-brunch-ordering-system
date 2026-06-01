@@ -51,7 +51,7 @@ function AppLoadingScreen() {
   return (
     <div className="app-loading-screen">
       <img
-        src="/images/logo-mark.png"
+        src={`${import.meta.env.BASE_URL}images/logo-mark.png`}
         alt="Smiling Brunch"
         className="app-loading-logo"
         onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
@@ -144,7 +144,7 @@ function AppRoutes() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
       <AuthProvider>
         <CartProvider>
           <AppRoutes />

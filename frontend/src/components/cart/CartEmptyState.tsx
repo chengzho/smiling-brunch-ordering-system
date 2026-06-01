@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { apiGetMenuItems } from '../../api/menuApi';
 import { formatCurrency } from '../../utils/formatCurrency';
+import { resolveAssetUrl } from '../../utils/assetPath';
 import type { MenuItem } from '../../types/menu';
 
 type CartEmptyStateProps = {
@@ -63,7 +64,7 @@ export function CartEmptyState({ onAddToCart }: CartEmptyStateProps) {
               <div key={item.item_id} className="cart-rec-card">
                 <div className="cart-rec-img">
                   <img
-                    src={item.image_url}
+                    src={resolveAssetUrl(item.image_url)}
                     alt={item.item_name}
                     loading="lazy"
                     onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
