@@ -1,5 +1,9 @@
 # Smiling Brunch Ordering System
 
+<p align="center">
+  <img src="frontend/public/images/logo-mark.png" alt="Smiling Brunch Logo" width="90" />
+</p>
+
 Smiling Brunch Ordering System 是以早午餐店為情境設計的線上點餐與後台管理系統。
 系統包含顧客前台點餐流程，以及管理員後台的菜單、訂單、分類、用戶與營運儀表板管理功能。
 
