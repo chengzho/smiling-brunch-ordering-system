@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smiling Brunch</title>
+    <style>
+      #initial-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #F8FAFC;
+        text-align: center;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        opacity: 1;
+        transition: opacity 180ms ease;
+      }
+      .initial-loader-hidden {
+        opacity: 0 !important;
+        pointer-events: none;
+      }
+      #initial-loader img {
+        width: 72px;
+        height: 72px;
+        object-fit: contain;
+        margin-bottom: 10px;
+      }
+      #initial-loader .il-brand {
+        font-size: 32px;
+        font-weight: 800;
+        color: #102033;
+        letter-spacing: -0.02em;
+        margin: 0;
+      }
+      #initial-loader .il-subtitle {
+        font-size: 16px;
+        color: #64748B;
+        margin: 6px 0 0;
+      }
+      #initial-loader .il-spinner {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 3px solid #DCE6EF;
+        border-top-color: #2F6F73;
+        animation: il-spin 1.3s linear infinite;
+        margin-top: 22px;
+      }
+      @keyframes il-spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="initial-loader">
+      <img
+        src="/images/logo-mark.png"
+        alt="Smiling Brunch"
+        onerror="this.style.display='none'"
+      />
+      <p class="il-brand">Smiling Brunch</p>
+      <p class="il-subtitle">正在為您準備今日的早午餐…</p>
+      <div class="il-spinner"></div>
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
