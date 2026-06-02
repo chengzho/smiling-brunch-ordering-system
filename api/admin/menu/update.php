@@ -11,7 +11,7 @@ requireAdmin();
 
 $data = getJsonInput();
 
-if (!validateRequired($data, ['item_id', 'category_id', 'item_name', 'description', 'price', 'image_url', 'is_available'])) {
+if (!validateRequired($data, ['item_id', 'category_id', 'item_name', 'description', 'price', 'is_available'])) {
     sendResponse(false, 'Missing required fields', null, 400);
 }
 
@@ -20,7 +20,7 @@ $categoryId  = (int) $data['category_id'];
 $itemName    = trim($data['item_name']);
 $description = trim($data['description']);
 $price       = $data['price'];
-$imageUrl    = trim($data['image_url']);
+$imageUrl    = isset($data['image_url']) ? trim($data['image_url']) : '';
 $isAvailable = (int) $data['is_available'];
 
 if (!validatePositiveNumber($price)) {
