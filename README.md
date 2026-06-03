@@ -40,8 +40,48 @@ Smiling Brunch Ordering System 是以早午餐店為情境設計的線上點餐�
 
 ### Home Page
 <p align="center">
-  <img src="./docs/screenshots/homepage.png" alt="Mobile View" width="260" />
-  <img src="./docs/screenshots/menu-page.png" alt="Desktop View" width="260" />
+  <img src="./docs/screenshots/homepage.png" alt="Homepage View" width="520" />
+</p>
+
+### Menu Page
+<p align="center">
+  <img src="./docs/screenshots/menu-page.png" alt="Menupage View" width="520" />
+</p>
+
+### Orders Page
+<p align="center">
+  <img src="./docs/screenshots/orders-page.png" alt="Orderspage View" width="520" />
+</p>
+<p align="center">
+  <img src="./docs/screenshots/orders-page-detail.png" alt="Orderspage View" width="520" />
+</p>
+
+### Cart Page
+<p align="center">
+  <img src="./docs/screenshots/cart-page.png" alt="Cartspage View" width="520" />
+</p>
+
+### Admin Dashboard Page
+<p align="center">
+  <img src="./docs/screenshots/admin-dashboard-1.png" alt="Adminpage View" width="520" />
+</p>
+<p align="center">
+  <img src="./docs/screenshots/admin-dashboard-2.png" alt="Adminpage View" width="520" />
+</p>
+
+### Admin Menu Page
+<p align="center">
+  <img src="./docs/screenshots/admin-menu.png" alt="Adminpage View" width="520" />
+</p>
+
+### Admin Orders Page
+<p align="center">
+  <img src="./docs/screenshots/admin-orders.png" alt="Adminpage View" width="520" />
+</p>
+
+### Admin Users Page
+<p align="center">
+  <img src="./docs/screenshots/admin-users.png" alt="Adminpage View" width="520" />
 </p>
 
 
