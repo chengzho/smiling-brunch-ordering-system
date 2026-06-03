@@ -69,14 +69,14 @@ Smiling Brunch Ordering System 是以早午餐店為情境設計的線上點餐�
   <img src="./docs/screenshots/admin-dashboard-2.png" alt="Adminpage View" width="520" />
 </p>
 
-### Admin Menu Page
-<p align="center">
-  <img src="./docs/screenshots/admin-menu.png" alt="Adminpage View" width="520" />
-</p>
-
 ### Admin Orders Page
 <p align="center">
   <img src="./docs/screenshots/admin-orders.png" alt="Adminpage View" width="520" />
+</p>
+
+### Admin Menu Page
+<p align="center">
+  <img src="./docs/screenshots/admin-menu.png" alt="Adminpage View" width="520" />
 </p>
 
 ### Admin Users Page
