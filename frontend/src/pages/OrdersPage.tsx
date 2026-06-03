@@ -32,9 +32,9 @@ export function OrdersPage({ mode }: Props) {
 
   useEffect(() => {
     if (orderSuccess) {
-      window.history.replaceState(null, '', '/orders');
+      navigate('/orders', { replace: true });
     }
-  }, [orderSuccess]);
+  }, [orderSuccess]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     setLoading(true);

@@ -11,12 +11,12 @@ requireAdmin();
 
 $data = getJsonInput();
 
-if (!validateRequired($data, ['category_name', 'description'])) {
+if (!validateRequired($data, ['category_name'])) {
     sendResponse(false, 'Missing required fields', null, 400);
 }
 
 $categoryName = trim($data['category_name']);
-$description  = trim($data['description']);
+$description  = isset($data['description']) ? trim($data['description']) : '';
 
 try {
     $pdo        = getDBConnection();

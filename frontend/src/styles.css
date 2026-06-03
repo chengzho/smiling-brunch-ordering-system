@@ -758,11 +758,41 @@ button {
 
 /* ── Footer ────────────────────────────────────────────────── */
 .customer-footer {
-  background: var(--color-surface);
+  background: #f8fafc;
   border-top: 1px solid var(--color-border);
-  padding: 20px 40px;
+}
+
+.footer-upper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 40px 40px;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.footer-col-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+
+.footer-col-text {
+  font-size: 15px;
+  color: #64748b;
+  line-height: 1.75;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--color-border);
+  padding: 16px 40px;
   text-align: center;
-  font-size: 13px;
+  font-size: 14px;
   color: #94a3b8;
 }
 
@@ -1255,23 +1285,6 @@ button {
   max-height: 184px;
   object-fit: contain;
   object-position: center;
-}
-
-.info-strip {
-  background: var(--color-surface);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
-  padding: 20px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  font-size: 13px;
-  color: #94a3b8;
-}
-
-.info-strip-dot {
-  color: var(--color-border);
 }
 
 /* ── MenuPage ──────────────────────────────────────────────── */
@@ -3189,8 +3202,9 @@ button {
   .hero-section         { padding: 36px 20px 48px; }
   .home-section         { padding: 0 20px 48px; }
   .home-featured-section { padding: 40px 20px 48px; }
-  .info-strip           { padding: 16px 20px; }
-  .customer-footer      { padding: 16px 20px; }
+  .footer-upper         { padding: 36px 24px 28px; }
+  .footer-columns       { gap: 28px; }
+  .footer-bottom        { padding: 14px 24px; }
 
   /* Hero banner: stack to single column */
   .hero-banner        { padding: 14px 20px; }
@@ -3230,7 +3244,9 @@ button {
   .hero-section          { padding: 28px 16px 36px; }
   .home-section          { padding: 0 16px 40px; }
   .home-featured-section { padding: 32px 16px 40px; }
-  .customer-footer       { padding: 12px 16px; }
+  .footer-upper          { padding: 28px 20px 24px; }
+  .footer-columns        { grid-template-columns: 1fr; gap: 24px; }
+  .footer-bottom         { padding: 12px 20px; }
 
   /* ── Hero banner: mobile ─────────────────────────────────── */
   .hero-banner        { padding: 10px 14px; }
@@ -3239,10 +3255,6 @@ button {
   .hero-banner-right  { min-height: 160px; }
   .hero-icon-group    { gap: 14px; }
   .hero-icon-item     { width: 56px; height: 56px; }
-
-  /* ── Info strip: wrap gracefully, hide dot separators ─────── */
-  .info-strip     { padding: 14px 16px; flex-wrap: wrap; gap: 6px 16px; }
-  .info-strip-dot { display: none; }
 
   /* ── Hero (old classes, kept for safety) ────────────────── */
   .hero-title   { font-size: 26px; }

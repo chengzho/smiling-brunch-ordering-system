@@ -113,15 +113,6 @@ export function HomePage() {
         </section>
       )}
 
-      {/* Info strip */}
-      <div className="info-strip">
-        <span>週一至週日 07:00 – 15:00</span>
-        <span className="info-strip-dot">·</span>
-        <span>外帶 · 內用</span>
-        <span className="info-strip-dot">·</span>
-        <span>線上訂餐免等候</span>
-      </div>
-
       {selectedItem && (
         <ProductDetailModal
           item={selectedItem}

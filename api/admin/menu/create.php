@@ -11,13 +11,13 @@ requireAdmin();
 
 $data = getJsonInput();
 
-if (!validateRequired($data, ['category_id', 'item_name', 'description', 'price'])) {
+if (!validateRequired($data, ['category_id', 'item_name', 'price'])) {
     sendResponse(false, 'Missing required fields', null, 400);
 }
 
 $categoryId  = (int) $data['category_id'];
 $itemName    = trim($data['item_name']);
-$description = trim($data['description']);
+$description = isset($data['description']) ? trim($data['description']) : '';
 $price       = $data['price'];
 $imageUrl    = isset($data['image_url']) ? trim($data['image_url']) : '';
 
